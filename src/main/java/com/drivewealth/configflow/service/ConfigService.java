@@ -45,6 +45,7 @@ public class ConfigService {
         e.setVersion(ver);
         configRepo.save(e);
         auditRepo.save(new AuditEntry(key, value, rolloutPercent, updatedBy, ver));
+        auditRepo.save(new AuditEntry(key, value, rolloutPercent, updatedBy, ver));
         return e;
     }
 
